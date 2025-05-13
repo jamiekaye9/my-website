@@ -7,9 +7,9 @@ const Navbar = () => {
             <img className='logo' src="/Images/logo.png" alt="Logo" />
           </div>
           <nav className="navbar">
-            <a className='text' href="">Home</a>
-            <a className='text' href="">About Me</a>
-            <a className='text' href="">Projects</a>
+            <a className='text' href="/">Home</a>
+            <a className='text' href="/about-me">About Me</a>
+            <a className='text' href="/projects">Projects</a>
           </nav>
           <div className="links">
             <a href="https://linkedin.com/in/jamie-kaye-734049187">
