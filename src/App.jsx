@@ -1,10 +1,11 @@
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <h1>Jamie Kaye</h1>
+      <Home />
     </>
   );
 };
