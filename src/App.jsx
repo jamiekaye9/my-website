@@ -1,6 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Navbar />
+      <h1>Jamie Kaye</h1>
+    </>
   );
 };
 

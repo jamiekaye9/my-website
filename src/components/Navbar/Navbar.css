@@ -1,0 +1,36 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    height: 125px;
+
+}
+
+.text {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.logo {
+    height: 110px;
+}
+
+.link-logo {
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.links {
+    display : flex;
+    justify-content: space-between;
+    width: 170px;
+}
