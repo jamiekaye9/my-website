@@ -5,15 +5,17 @@ const AboutMe = () => {
   const pageContent = [
     {
       id: 1,
-      title: "Skills",
+      title: "Software Engineering",
       content:
-        "I am a recent graduate of the General Assembly Software Engineering Bootcamp — an intensive, 450+ hour program focused on full-stack development. Through lectures, labs, and multiple projects, I’ve built a portfolio of applications that demonstrate my versatility across a range of languages and frameworks. I’ve particularly enjoyed the challenge of solving complex problems and researching models and libraries to enhance both the performance and quality of my code. I'm now looking forward to continuing my development, learning from experienced engineers, and sharpening my skills in a full-time Software Engineering role.",
+        "I recently completed General Assembly’s 450+ hour Software Engineering Bootcamp, an intensive program focused on full-stack development. Through hands-on labs, lectures, and real-world projects, I built a portfolio that showcases my ability to work across multiple languages, frameworks, and problem-solving challenges.",
+      image: "/Images/software.jpeg",
     },
     {
       id: 2,
       title: "Experience",
       content:
-        "I bring four years of experience as a Business Analyst in both the luxury retail and legal sectors. During this time, I’ve worked on a variety of initiatives — from small-scale enhancements to major digital transformation programs — all within live, operational environments. This has equipped me with transferable skills essential to a Software Engineer, including a strong understanding of the project lifecycle, agile and waterfall methodologies, and effective stakeholder communication at all levels. I've also developed a keen interest in data, particularly around governance and quality — two aspects that have consistently proven critical to the success of integrations and platforms I've supported.",
+        "I have four years of experience as a Business Analyst in the luxury retail and legal sectors, working on projects from minor enhancements to large-scale digital transformations. This has given me a strong grasp of the project lifecycle, agile and waterfall methods, and effective stakeholder communication, along with a keen interest in data governance and quality.",
+      image: "/Images/office.jpeg",
     },
     {
       id: 3,
@@ -31,13 +33,15 @@ const AboutMe = () => {
         "Python",
         "Django",
         "EJS",
-      ]
+      ],
+      image: "/Images/skills.jpeg",
     },
-        {
+    {
       id: 4,
       title: "Personal",
       content:
-        "I'm 26 years old, originally from Manchester and now based in London, UK. I’m a passionate sports fan — especially when it comes to football and Formula One — and I regularly support Manchester United at Old Trafford whenever I can. Outside of work, I enjoy cooking, exploring theatre and comedy events, and discovering new places. I’ve set myself the goal of trying different cuisines across London, using food blogs and reviews to guide my culinary adventures.",
+        "I'm 26, originally from Manchester and now based in London. I'm a passionate sports fan—especially football and Formula One—and regularly support Manchester United at Old Trafford. Outside of work, I enjoy cooking, theatre, comedy, and exploring new places, with a personal goal to try different cuisines across London using food blogs and reviews as my guide.",
+      image: "/Images/football.jpeg",
     },
   ];
 
@@ -52,30 +56,66 @@ const AboutMe = () => {
 
   return (
     <main className="about-container">
-      <div className="about-header">
-        <h1 className="about-title">About Me</h1>
-      </div>
-      {pageContent.map((section) => (
-        <div key={section.id} className="about-section">
-          <div className={`flip-card ${flippedCards[section.id] ? "flipped" : ""}`}>
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <div className="card-content">
-                  <h2>{section.title}</h2>
-                  <button className="flip-button" onClick={() => handleFlip(section.id)}>Flip</button>
+      <h1 className="about-title">About Me</h1>
+      <div className="grid">
+        {pageContent.map((section) => (
+          <div key={section.id} className="about-section">
+            <div
+              className={`flip-card ${
+                flippedCards[section.id] ? "flipped" : ""
+              }`}
+            >
+              <div className="flip-card-inner">
+                <div
+                  className="flip-card-front"
+                  style={{
+                    backgroundImage: `url(${section.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="card-content-front">
+                    <h2 className="front-title">{section.title}</h2>
+                    <button
+                      className="flip-button-front"
+                      onClick={() => handleFlip(section.id)}
+                    >
+                      {">"}
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="card-content">
-                  <h2>{section.title}</h2>
-                  <p>{section.content}</p>
-                  <button className="flip-button" onClick={() => handleFlip(section.id)}>Flip</button>
+                <div
+                  className="flip-card-back"
+                  style={{
+                    backgroundImage: `url(${section.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="card-content-back">
+                    <h2>{section.title}</h2>
+                    {section.id === 3 ? (
+                      <ul className="skill">
+                        {section.content.map((skill, index) => (
+                          <li key={index}>{skill}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="section-content">{section.content}</p>
+                    )}
+                    <button
+                      className="flip-button-back"
+                      onClick={() => handleFlip(section.id)}
+                    >
+                      {">"}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </main>
   );
 };
