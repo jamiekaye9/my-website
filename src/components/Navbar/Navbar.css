@@ -1,38 +1,90 @@
 .navbar-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: black;
-    height: 125px;
-    width: 100%;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  height: 125px;
+  width: 100%;
 }
 
 .text {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
 }
 
 .logo {
-    height: 110px;
-    padding-left: 100px;
+  height: 110px;
 }
 
 .link-logo {
-    height: 70px;
+  height: 70px;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
 .links {
-    display : flex;
-    justify-content: space-between;
-    width: 170px;
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .link-logo {
+    height: 50px;
+  }
+
+  .navbar-container {
+    height: 70px;
+    position: relative;
+  }
+
+  .navbar .text {
+    font-size: 18px;
+    padding-left: 15px;
+  }
 }

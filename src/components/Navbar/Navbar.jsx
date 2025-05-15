@@ -9,7 +9,7 @@ const Navbar = () => {
       <div>
         <img className="logo" src="/Images/logo.png" alt="Logo" />
       </div>
-      <nav className="navbar">
+      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <a className="text" href="/">
           Home
         </a>
