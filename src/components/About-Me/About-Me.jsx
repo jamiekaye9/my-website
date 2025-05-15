@@ -93,7 +93,7 @@ const AboutMe = () => {
                   }}
                 >
                   <div className="card-content-back">
-                    <h2>{section.title}</h2>
+                    <h2 className="front-title">{section.title}</h2>
                     {section.id === 3 ? (
                       <ul className="skill">
                         {section.content.map((skill, index) => (
