@@ -22,7 +22,7 @@ const App = () => {
       techUsed: "HTML, CSS, JavaScript",
       img: "/Images/footbingo.png",
       backgroundColor: "#2E0248",
-      imageWdith: "350px",
+      imageWdith: "300px",
       bigImageWidth: "400px",
       link: "https://jamiekaye9.github.io/football-bingo/",
       gitLink: "https://github.com/jamiekaye9/football-bingo"
@@ -39,7 +39,7 @@ const App = () => {
       techUsed: "HTML, CSS, JavaScript, Node.js, MongoDB, EJS",
       img: "/Images/team-link.png",
       backgroundColor: "#9161B8",
-      imageWdith: "230px",
+      imageWdith: "200px",
       bigImageWidth: "300px",
       link: "https://team-link-git-main-jamie-kayes-projects.vercel.app",
       gitLink: "https://github.com/jamiekaye9/team-link"
@@ -56,7 +56,7 @@ const App = () => {
       img: "/Images/fix-hub logo.png",
       techUsed: "HTML, CSS, JSX, Express, React, MongoDB",
       backgroundColor: "#2F302F",
-      imageWdith: "170px",
+      imageWdith: "140px",
       bigImageWidth: "200px",
       Link: "Coming Soon",
       gitLink: "https://github.com/jamiekaye9/fix-hub-front-end/blob/main/README.md"

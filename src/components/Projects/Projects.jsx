@@ -1,5 +1,4 @@
 import "./Projects.css";
-// import { Link } from "react-router-dom";
 
 const Projects = (props) => {
   return (
@@ -20,7 +19,7 @@ const Projects = (props) => {
                 style={{ width: project.imageWdith }}
               />
             </div>
-            <div>
+            <div className="project-button-container">
               <a className="more-info" href={`/projects/${project.id}`}>
                 More Info
               </a>
