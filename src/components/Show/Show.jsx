@@ -6,20 +6,29 @@ const Show = (props) => {
     const project = props.projects.find((project) => project.id === parseInt(id));
     return (
         <main className='show-main-container'>
-            <div className='show-container' style={{ backgroundColor: project.backgroundColor }}>
-                <img className='project-image' src={project.img} alt={project.name} style={{width: project.bigImageWidth}} />
-                <div>
-                <p className='text-title'>Deployed Link:</p>
-                <a href={project.link} className='text'>{project.link}</a>
-                <p className='text-title'>Technologies Used:</p>
-                <p className='text'>{project.techUsed}</p>
+            <div className='show-container'>
+                <div className='show-logo-container' style={{ backgroundColor: project.backgroundColor }}>
+                    <img className='show-logo' src={project.img} alt={project.name} style={{ width: project.bigImageWidth }} />
+                    <a href={project.link} className='show-link'>Deployed Link</a>
+                </div>
+                <div className='show-text-container' style={{ backgroundColor: project.backgroundColor }}>
+                    <h2 className='show-title'>Description</h2>
+                    <p className='show-text'>{project.description}</p>
+                </div>
+                <div className='show-text-container' style={{ backgroundColor: project.backgroundColor }}>
+                    <h2 className="show-title">Reflection</h2>
+                    <p className='show-text'>{project.build}</p>
                 </div>
             </div>
-            <div className='info-container'>
-                <h2 className='info-title'>Description:</h2>
-                <p className='description'>{project.description}</p>
-                <h2 className='info-title'>Project Reflection:</h2>
-                <p className='description'>{project.build}</p>
+            <div className='show-tech-container' style={{ backgroundColor: project.backgroundColor }}>
+                <div className='show-tech'>
+                    <h2 className='show-title-tech'>Technologies Used:</h2>
+                    <p className='tech-used'>{project.techUsed}</p>
+                </div>
+                <div>
+                    <a href={project.gitLink} className='show-link'>GitHub Link</a>
+
+                </div>
             </div>
         </main>
     )

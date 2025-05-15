@@ -25,6 +25,7 @@ const App = () => {
       imageWdith: "350px",
       bigImageWidth: "400px",
       link: "https://jamiekaye9.github.io/football-bingo/",
+      gitLink: "https://github.com/jamiekaye9/football-bingo"
     },
     {
       id: 2,
@@ -41,6 +42,7 @@ const App = () => {
       imageWdith: "230px",
       bigImageWidth: "300px",
       link: "https://team-link-git-main-jamie-kayes-projects.vercel.app",
+      gitLink: "https://github.com/jamiekaye9/team-link"
     },
     {
       id: 3,
@@ -57,6 +59,7 @@ const App = () => {
       imageWdith: "170px",
       bigImageWidth: "200px",
       Link: "Coming Soon",
+      gitLink: "https://github.com/jamiekaye9/fix-hub-front-end/blob/main/README.md"
     },
   ];
 
