@@ -1,6 +1,10 @@
 .footer-container {
     background-color: black;
     color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-list {
@@ -9,4 +13,5 @@
     justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    width: 100%;
 }

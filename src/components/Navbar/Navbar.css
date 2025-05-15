@@ -5,6 +5,7 @@
     padding: 10px 20px;
     background-color: black;
     height: 125px;
+    width: 100%;
 
 }
 
@@ -17,6 +18,7 @@
 
 .logo {
     height: 110px;
+    padding-left: 100px;
 }
 
 .link-logo {
@@ -25,8 +27,8 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    width: 500px;
+    justify-content: space-around;
+    width: 50%;
 }
 
 .links {
