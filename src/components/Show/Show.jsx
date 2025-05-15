@@ -8,7 +8,7 @@ const Show = (props) => {
         <main className='show-main-container'>
             <div className='show-container'>
                 <div className='show-logo-container' style={{ backgroundColor: project.backgroundColor }}>
-                    <img className='show-logo' src={project.img} alt={project.name} style={{ width: project.bigImageWidth }} />
+                    <img className='show-logo' src={project.img} alt={project.name} style={{ width: project.showWidth }} />
                     <a href={project.link} className='show-link'>Deployed Link</a>
                 </div>
                 <div className='show-text-container' style={{ backgroundColor: project.backgroundColor }}>

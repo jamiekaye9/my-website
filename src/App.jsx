@@ -57,6 +57,7 @@ const App = () => {
       techUsed: "HTML, CSS, JSX, Express, React, MongoDB",
       backgroundColor: "#2F302F",
       imageWdith: "140px",
+      showWidth: '200px',
       bigImageWidth: "200px",
       Link: "Coming Soon",
       gitLink: "https://github.com/jamiekaye9/fix-hub-front-end/blob/main/README.md"
