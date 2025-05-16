@@ -25,14 +25,14 @@ const Navbar = () => {
         <a href="https://linkedin.com/in/jamie-kaye-734049187">
           <img
             className="link-logo"
-            src="/Images/linkedin-logo.png"
+            src="./Images/linkedin-logo.png"
             alt="LinkedIn Logo"
           />
         </a>
         <a href="https://github.com/jamiekaye9">
           <img
             className="link-logo"
-            src="/Images/github-logo.png"
+            src="./Images/github-logo.png"
             alt="Github Logo"
           />
         </a>
