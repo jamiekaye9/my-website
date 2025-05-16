@@ -21,7 +21,7 @@ const Projects = (props) => {
               />
             </div>
             <div className="project-button-container">
-              <Link className="more-info" href={`/projects/${project.id}`}>
+              <Link className="more-info" to={`/projects/${project.id}`}>
                 More Info
               </Link>
             </div>
