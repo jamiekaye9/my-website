@@ -20,7 +20,7 @@ const App = () => {
       build:
         "This was an individual project, built in a 1 week period. I used the flex CSS method to create the grid layout of the game. I was especially proud of the way I randomise the grid each time the game is loaded, using the Fisher-Yates shuffle algorithm. A future improvement to this application would be to add a timer, allowing users to improve their speed as well as their score.",
       techUsed: "HTML, CSS, JavaScript",
-      img: "/Images/footbingo.png",
+      img: "./Images/footbingo.png",
       backgroundColor: "#2E0248",
       imageWdith: "300px",
       bigImageWidth: "400px",
@@ -37,7 +37,7 @@ const App = () => {
       build:
         "This was an individual project, built in a 1 week period. I used MongoDB to store the data and was especially proud of the way I used reference based modelling to create the link between users and companies. A future improvement to this application would be additional analytics on the finances dashboard, using charts to display the data.",
       techUsed: "HTML, CSS, JavaScript, Node.js, MongoDB, EJS",
-      img: "/Images/team-link.png",
+      img: "./Images/team-link.png",
       backgroundColor: "#9161B8",
       imageWdith: "200px",
       bigImageWidth: "300px",
@@ -53,7 +53,7 @@ const App = () => {
         "This is an IT Incident Management Application. Users are able to select a job role of either 'Requestor' or 'Service Desk' when they sign up to the site. This decides which functionality they have access to throughout the application. Requestors can create, update and delete their incidents, as well as viewing all created tickets. Service Desk users have the ability to re-assign tickets, view all tickets assigned to them and update a ticket status. The app also includes a dashboard, presenting some analytics in chart form.",
       build:
         "This was an individual project, built in a 1 week period. I used the 'Recharts' libary to create a dashboard which gives users a visual analysis of open tickets by both priorty and status. I was especially proud of the way I designed the permissions of the application, using the user roles to determine which users can access certain fields when updating a ticket. A future improvement to this application would be to use reference based modelling to create a company and user relationship, allowing users to only see and work on tickets that are linked to their company.",
-      img: "/Images/fix-hub logo.png",
+      img: "./Images/fix-hub logo.png",
       techUsed: "HTML, CSS, JSX, Express, React, MongoDB",
       backgroundColor: "#2F302F",
       imageWdith: "140px",

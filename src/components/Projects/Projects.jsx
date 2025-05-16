@@ -1,4 +1,5 @@
 import "./Projects.css";
+import { Link } from "react-router-dom";
 
 const Projects = (props) => {
   return (
@@ -20,9 +21,9 @@ const Projects = (props) => {
               />
             </div>
             <div className="project-button-container">
-              <a className="more-info" href={`/projects/${project.id}`}>
+              <Link className="more-info" href={`/projects/${project.id}`}>
                 More Info
-              </a>
+              </Link>
             </div>
             <div className="project-text-container">
               <h2>{project.name}</h2>

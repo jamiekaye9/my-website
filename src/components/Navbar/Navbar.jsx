@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -7,18 +8,18 @@ const Navbar = () => {
   return (
     <main className="navbar-container">
       <div>
-        <img className="logo" src="/Images/logo.png" alt="Logo" />
+        <img className="logo" src="./Images/logo.png" alt="Logo" />
       </div>
-      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-        <a className="text" href="/">
+      <nav className={`navbar ${isOpen ? "open" : ""}`}>
+        <Link className="text" to="/">
           Home
-        </a>
-        <a className="text" href="/about-me">
+        </Link>
+        <Link className="text" to="/about-me">
           About Me
-        </a>
-        <a className="text" href="/projects">
+        </Link>
+        <Link className="text" to="/projects">
           Projects
-        </a>
+        </Link>
       </nav>
       <div className="links">
         <a href="https://linkedin.com/in/jamie-kaye-734049187">

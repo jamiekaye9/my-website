@@ -8,14 +8,14 @@ const AboutMe = () => {
       title: "Software Engineering",
       content:
         "I recently completed General Assembly’s 450+ hour Software Engineering Bootcamp, an intensive program focused on full-stack development. Through hands-on labs, lectures, and real-world projects, I built a portfolio that showcases my ability to work across multiple languages, frameworks, and problem-solving challenges.",
-      image: "/Images/software.jpeg",
+      image: "./Images/software.jpeg",
     },
     {
       id: 2,
       title: "Experience",
       content:
         "I have four years of experience as a Business Analyst in the luxury retail and legal sectors, working on projects from minor enhancements to large-scale digital transformations. This has given me a strong grasp of the project lifecycle, agile and waterfall methods, and effective stakeholder communication, along with a keen interest in data governance and quality.",
-      image: "/Images/office.jpeg",
+      image: "./Images/office.jpeg",
     },
     {
       id: 3,
@@ -34,14 +34,14 @@ const AboutMe = () => {
         "Django",
         "EJS",
       ],
-      image: "/Images/skills.jpeg",
+      image: "./Images/skills.jpeg",
     },
     {
       id: 4,
       title: "Personal",
       content:
         "I'm 26, originally from Manchester and now based in London. I'm a passionate sports fan—especially football and Formula One—and regularly support Manchester United at Old Trafford. Outside of work, I enjoy cooking, theatre, comedy, and exploring new places, with a personal goal to try different cuisines across London using food blogs and reviews as my guide.",
-      image: "/Images/football.jpeg",
+      image: "./Images/football.jpeg",
     },
   ];
 
