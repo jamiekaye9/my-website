@@ -73,7 +73,7 @@ const App = () => {
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/projects/:id" element={<Show projects={projects} />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };

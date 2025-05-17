@@ -1,90 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Monoton&display=swap');
+
 .navbar-container {
+  background-color: rgb(46, 41, 41);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 50px;
   align-items: center;
-  padding: 10px 20px;
-  background-color: black;
-  height: 125px;
+  height: 10vh;
   width: 100%;
+  border-bottom: 1px solid #a5e6ff;
 }
 
-.text {
-  color: white;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-}
-
-.logo {
-  height: 110px;
+.socials {
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
 }
 
 .link-logo {
-  height: 70px;
+  height: 80px;
+}
+
+.text {
+  color: #a5e6ff;
+  text-decoration: none;
+  font-family: 'Gruppo', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
-  width: 50%;
-}
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  width: 170px;
+  width: 35%;
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
 }
 
 .bar {
-  width: 25px;
-  height: 3px;
+  height: 4px;
+  width: 100%;
   background-color: white;
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
   .navbar {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
+    top: 10vh;
     left: 0;
     width: 100%;
-    background-color: black;
-    padding: 10px 0;
-    gap: 10px;
-    z-index: 1000;
+    background-color: rgb(46, 41, 41);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
   }
 
   .navbar.open {
     display: flex;
+    flex-direction: row;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .logo {
-    height: 50px;
+  .navbar-container {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    height: 10vh;
+    z-index: 1000;
+    padding: 0 20px;
+  }
+
+  .socials {
+    width: auto;
+  }
+
+  .text {
+    font-size: 20px;
   }
 
   .link-logo {
     height: 50px;
-  }
-
-  .navbar-container {
-    height: 70px;
-    position: relative;
-  }
-
-  .navbar .text {
-    font-size: 18px;
-    padding-left: 15px;
   }
 }
