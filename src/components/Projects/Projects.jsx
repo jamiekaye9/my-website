@@ -14,7 +14,7 @@ const Projects = (props) => {
           >
             <div className="project-image-container">
               <img
-                className="project-image"
+                className={project.imageWidthClass}
                 src={project.img}
                 alt={project.name}
                 style={{ width: project.imageWdith }}

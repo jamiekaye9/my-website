@@ -6,22 +6,19 @@ const Show = (props) => {
   const project = props.projects.find((project) => project.id === parseInt(id));
   return (
     <main className="show-main-container">
-      <div className="show-container">
         <div
           className="show-logo-container"
           style={{ backgroundColor: project.backgroundColor }}
         >
           <img
-            className="show-logo"
+            className={project.imageWidthClassShow}
             src={project.img}
             alt={project.name}
-            style={{ width: project.imageWidth }}
           />
           <a href={project.link} className="show-link">
             Deployed Link
           </a>
         </div>
-      </div>
       <div className="show-text-container">
         <h2 className="show-title">Description</h2>
         <p className="show-text">{project.description}</p>
@@ -30,7 +27,7 @@ const Show = (props) => {
         <h2 className="show-title">Reflection</h2>
         <p className="show-text">{project.build}</p>
       </div>
-      <div className="show-text-container">
+      <div className="show-tech-container">
           <h2 className="show-title">Technologies Used:</h2>
           <p className="show-text-tech">{project.techUsed}</p>
           <a href={project.gitLink} className="show-link-git">
