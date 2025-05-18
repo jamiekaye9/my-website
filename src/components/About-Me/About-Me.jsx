@@ -45,10 +45,7 @@ const AboutMe = () => {
     },
   ];
 
-  const [content, setContent] = useState(null)
-
-
-
+  const [content, setContent] = useState(null);
 
   return (
     <main className="about-container">
@@ -57,38 +54,76 @@ const AboutMe = () => {
       </section>
       <section className="about-content">
         <div className="grid">
-        {pageContent.map((section) => (
+          {pageContent.map((section) => (
             <div className="about-card" onClick={() => setContent(section)}>
-            <h2 className="section-title">{section.title}</h2>
-            <img
-              className="section-image"
-              src={section.image}
-              alt={section.title}
-            />
+              <h2 className="section-title">{section.title}</h2>
+              <img
+                className="section-image"
+                src={section.image}
+                alt={section.title}
+              />
             </div>
-        ) )}
+          ))}
         </div>
         <div className="card-content">
-  {content ? (
-    <>
-      <h2 className="content-title">{content.title}</h2>
-      {Array.isArray(content.content) ? (
-        <ul className="content-skills">
-          {content.content.map((skill, i) => (
-            <li key={i} className="skill">{skill}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className="content-para">{content.content}</p>
-      )}
-    </>
-  ) : (
-    <p className="content-title">Click a card to see more.</p>
-  )}
-</div>
+          {content ? (
+            <>
+              <div className="content-header">
+                <h2 className="content-title">{content.title}</h2>
+                <img
+                  src={content.image}
+                  alt={content.title}
+                  className="box-image"
+                />
+              </div>
+              {Array.isArray(content.content) ? (
+                <ul className="content-skills">
+                  {content.content.map((skill, i) => (
+                    <li key={i} className="skill">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="content-para">{content.content}</p>
+              )}
+            </>
+          ) : (
+            <p className="content-title">Click a card to see more.</p>
+          )}
+        </div>
       </section>
-
-
+      <section className="phone-content-container">
+        {pageContent.map((content) => (
+          <div className="phone-content">
+          {content ? (
+            <>
+              <div className="content-header">
+                <h2 className="content-title">{content.title}</h2>
+                <img
+                  src={content.image}
+                  alt={content.title}
+                  className="box-image"
+                />
+              </div>
+              {Array.isArray(content.content) ? (
+                <ul className="content-skills">
+                  {content.content.map((skill, i) => (
+                    <li key={i} className="skill">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="content-para">{content.content}</p>
+              )}
+            </>
+          ) : (
+            <p className="content-title">Click a card to see more.</p>
+          )}
+        </div>
+        ))}
+      </section>
     </main>
   );
 };

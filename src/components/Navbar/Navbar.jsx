@@ -7,6 +7,7 @@ const Navbar = () => {
 
   return (
     <main className="navbar-container">
+      <div className="left-nav">
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <div className="bar"></div>
         <div className="bar"></div>
@@ -26,6 +27,7 @@ const Navbar = () => {
           Contact
         </Link>
       </nav>
+      </div>
       <div className="socials">
       <a href="https://linkedin.com/in/jamie-kaye-734049187">
         <img

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Monoton&display=swap');
 
 .home-container {
-    height: 90vh;
+    height: 958px;
     width: 100%;
     background-color: rgb(46, 41, 41);
     display: flex;
@@ -26,7 +26,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 100px;
     width: 50%;
     height: 70%;
 }
@@ -54,7 +55,7 @@
 .box-container {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -80,27 +81,84 @@
 }
 
 .logo {
-    width: 80%
+    width: 80%;
+    height: auto;
 }
 
 .box-link {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1520px) {
+    .box {
+        height: 250px;
+        width: 200px;
+    }
+
+    .box-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .logo-big {
+        width: 60%;
+    }
+
+    .job-title {
+        font-size: 30px;
+    }
+
+    .home-name {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1328px) {
+    .home-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        overflow-y: auto;
+        gap: 100px;
+        padding-bottom: 50px;
+        padding-top: 140px;
+
+    }
+
+    .box-container {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .home-content {
+        width: 100%;
+        gap: 100px;
+    }
+} 
+
+@media (max-width: 810px) {
     .box:hover {
         transform: none;
     }
 
     .home-container {
-        flex-direction: column;
-        height: 300vh;
+         flex-direction: column;
+        height: auto;
         width: 100%;
+        overflow-y: auto;
+        gap: 100px;
+        padding-bottom: 50px;
+        padding-top: 140px;
+
+
     }
 
     .home-content {
         width: 100%;
-        border: 2px solid #a5e6ff;
         align-items: center;
         justify-self: center;
     }

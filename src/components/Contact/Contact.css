@@ -27,6 +27,11 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 0 10px #a5e6ff;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
 }
 
 .card-title {
