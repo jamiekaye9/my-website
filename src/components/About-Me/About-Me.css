@@ -41,8 +41,6 @@
   align-items: center;
   text-align: center;
   gap: 10px;
-
-  /* box-shadow: 0px 0px 10px 0px #a5e6ff; */
 }
 
 .about-card:hover {
@@ -63,7 +61,7 @@
 .about-title {
   font-family: 'Gruppo', sans-serif;
   font-size: 50px;
-  color: #a5e6ff;
+  color: #ffffff;
 }
 
 .overlay {

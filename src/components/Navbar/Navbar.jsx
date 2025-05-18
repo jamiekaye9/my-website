@@ -22,6 +22,9 @@ const Navbar = () => {
         <Link className="text" to="/projects" onClick={() => setIsOpen(false)}>
           Projects
         </Link>
+        <Link className="text" to="/contact" onClick={() => setIsOpen(false)}>
+          Contact
+        </Link>
       </nav>
       <div className="socials">
       <a href="https://linkedin.com/in/jamie-kaye-734049187">

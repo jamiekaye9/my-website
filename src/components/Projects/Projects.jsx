@@ -26,7 +26,7 @@ const Projects = (props) => {
               </Link>
             </div>
             <div className="project-text-container">
-              <h2>{project.name}</h2>
+
               <p className="desc">{project.shortDescription}</p>
             </div>
           </div>

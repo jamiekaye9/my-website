@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
 import AboutMe from "./components/About-Me/About-Me";
 import Projects from "./components/Projects/Projects";
 import Show from "./components/Show/Show";
+import Contact from "./components/Contact/contact";
 import "./App.css";
 
 const App = () => {
@@ -50,9 +50,9 @@ const App = () => {
       shortDescription:
         "IT Incident Management Application, allowing users to create, manage and analyse their IT incidents.",
       description:
-        "This is an IT Incident Management Application. Users are able to select a job role of either 'Requestor' or 'Service Desk' when they sign up to the site. This decides which functionality they have access to throughout the application. Requestors can create, update and delete their incidents, as well as viewing all created tickets. Service Desk users have the ability to re-assign tickets, view all tickets assigned to them and update a ticket status. The app also includes a dashboard, presenting some analytics in chart form.",
+        "This is an IT Incident Management Application. Users can sign up as either a 'Requestor' or 'Service Desk', determining their access within the app. Requestors can manage their own tickets and view all created incidents, while Service Desk users can reassign tickets, update statuses, and view those assigned to them. The app also features a dashboard with visual analytics.",
       build:
-        "This was an individual project, built in a 1 week period. I used the 'Recharts' libary to create a dashboard which gives users a visual analysis of open tickets by both priorty and status. I was especially proud of the way I designed the permissions of the application, using the user roles to determine which users can access certain fields when updating a ticket. A future improvement to this application would be to use reference based modelling to create a company and user relationship, allowing users to only see and work on tickets that are linked to their company.",
+        "This solo project was built in one week and features a dashboard using the Recharts library to visually display open tickets by priority and status. I’m particularly proud of the role-based permissions system, which controls field access during ticket updates. A future enhancement would be implementing reference-based modeling to link users to companies, ensuring they only access tickets relevant to their organization.",
       img: "./Images/fix-hub logo.png",
       techUsed: "HTML, CSS, JSX, Express, React, MongoDB",
       backgroundColor: "#2F302F",
@@ -72,8 +72,8 @@ const App = () => {
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/projects/:id" element={<Show projects={projects} />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
     </main>
   );
 };
