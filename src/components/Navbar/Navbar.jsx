@@ -1,50 +1,64 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import Collapse from 'bootstrap/js/dist/collapse';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const navbarRef = useRef(null);
+  const bsCollapse = useRef(null);
+  const location = useLocation();
+
+  // Initialize Bootstrap Collapse instance on mount
+  useEffect(() => {
+    if (navbarRef.current) {
+      bsCollapse.current = new Collapse(navbarRef.current, {
+        toggle: false // don't auto-toggle on init
+      });
+    }
+  }, []);
+
+  // Close navbar on route change
+  useEffect(() => {
+    if (bsCollapse.current && navbarRef.current.classList.contains('show')) {
+      bsCollapse.current.hide();
+    }
+  }, [location.pathname]);
 
   return (
-    <main className="navbar-container">
-      <div className="left-nav">
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div className="container-fluid ms-2">
+        <Link to="/" className="navbar-brand limelight text-info">
+          <img src="./Images/Portfolio.png" alt="Logo" style={{ width: "150px" }} />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => bsCollapse.current.toggle()}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse gap-5" id="navbar" ref={navbarRef}>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link to="/about-me" className="nav-link">About Me</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/projects" className="nav-link">Projects</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link">Contact</Link>
+            </li>
+          </ul>
+          <div className="navbar-text d-flex gap-4 me-2">
+            <a href="https://github.com/jamiekaye9" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-github fs-1"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jamie-kaye-734049187" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-linkedin fs-1"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <nav className={`navbar ${isOpen ? "open" : ""}`}>
-        <Link className="text" to="/" onClick={() => setIsOpen(false)}>
-          Home
-        </Link>
-        <Link className="text" to="/about-me" onClick={() => setIsOpen(false)}>
-          About Me
-        </Link>
-        <Link className="text" to="/projects" onClick={() => setIsOpen(false)}>
-          Projects
-        </Link>
-        <Link className="text" to="/contact" onClick={() => setIsOpen(false)}>
-          Contact
-        </Link>
-      </nav>
-      </div>
-      <div className="socials">
-      <a href="https://linkedin.com/in/jamie-kaye-734049187">
-        <img
-          className="link-logo"
-          src="./Images/linkedin-logo.png"
-          alt="LinkedIn Logo"
-        />
-      </a>
-      <a href="https://github.com/jamiekaye9">
-        <img
-          className="link-logo"
-          src="./Images/github-logo.png"
-          alt="Github Logo"
-        />
-      </a>
-      </div>
-    </main>
+    </nav>
   );
 };
 

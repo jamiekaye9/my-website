@@ -1,130 +1,87 @@
 import { useState } from "react";
-import "./About-Me.css";
 
 const AboutMe = () => {
-  const pageContent = [
-    {
-      id: 1,
-      title: "Software Engineering",
-      content:
-        "I recently completed General Assembly’s 450+ hour Software Engineering Bootcamp, an intensive program focused on full-stack development. Through hands-on labs, lectures, and real-world projects, I built a portfolio that showcases my ability to work across multiple languages, frameworks, and problem-solving challenges.",
-      image: "./Images/software-engineer.png",
-    },
-    {
-      id: 2,
-      title: "Experience",
-      content:
-        "I have four years of experience as a Business Analyst in the luxury retail and legal sectors, working on projects from minor enhancements to large-scale digital transformations. This has given me a strong grasp of the project lifecycle, agile and waterfall methods, and effective stakeholder communication, along with a keen interest in data governance and quality.",
-      image: "./Images/experience.png",
-    },
-    {
-      id: 3,
-      title: "Skills",
-      content: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Postman",
-        "SQL",
-        "Python",
-        "Django",
-        "EJS",
-      ],
-      image: "./Images/skills.png",
-    },
-    {
-      id: 4,
-      title: "Personal",
-      content:
-        "I'm 26, originally from Manchester and now based in London. I'm a passionate sports fan—especially football and Formula One—and regularly support Manchester United at Old Trafford. Outside of work, I enjoy cooking, theatre, comedy, and exploring new places, with a personal goal to try different cuisines across London using food blogs and reviews as my guide.",
-      image: "./Images/hobbies.png",
-    },
-  ];
-
-  const [content, setContent] = useState(null);
-
   return (
-    <main className="about-container">
-      <section className="about-header">
-        <h1 className="about-title">About Me</h1>
-      </section>
-      <section className="about-content">
-        <div className="grid">
-          {pageContent.map((section) => (
-            <div className="about-card" onClick={() => setContent(section)}>
-              <h2 className="section-title">{section.title}</h2>
-              <img
-                className="section-image"
-                src={section.image}
-                alt={section.title}
-              />
-            </div>
-          ))}
+    <div className="container d-flex flex-column justify-content-center align-items-center mt-4">
+      <div className="row  d-flex flex-column justify-content-center align-items-center">
+        <div className="col-10 col-md-12 d-flex flex-column justify-content-center align-items-center gap-4 mb-5">
+          <h1 className="display-4">About Me</h1>
+          <p className="text-center">After four years working as a Business Analyst, I developed a deep interest in 
+            how software is created, designed, and integrated—particularly the role that data 
+            quality and structure play in building effective systems. This curiosity led me 
+            to make a career change into software engineering, enrolling in General Assembly’s 
+            immersive Software Engineering Bootcamp. During the course, I gained a strong 
+            foundation in programming and applied my learning through four hands-on projects, 
+            using a range of technologies across both front-end and back-end development. 
+            Now that I’ve completed the program, I’m focused on sharpening and expanding my 
+            skills as I actively pursue my first role in the industry. I'm excited to contribute 
+            to real-world products and continue growing as a developer by building on everything 
+            I’ve learned so far.
+          </p>
         </div>
-        <div className="card-content">
-          {content ? (
-            <>
-              <div className="content-header">
-                <h2 className="content-title">{content.title}</h2>
-                <img
-                  src={content.image}
-                  alt={content.title}
-                  className="box-image"
-                />
-              </div>
-              {Array.isArray(content.content) ? (
-                <ul className="content-skills">
-                  {content.content.map((skill, i) => (
-                    <li key={i} className="skill">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="content-para">{content.content}</p>
-              )}
-            </>
-          ) : (
-            <p className="content-title">Click a card to see more.</p>
-          )}
+      </div>
+      <div className="row  d-flex justify-content-center align-items-center">
+        <div className="card col-11 col-md-12 rounded-4 border-2 mb-5">
+          <div className="card-body">
+            <h3 className="card-title text-center mb-4 display-6">Skills</h3>
+            <ul className="d-flex flex-row card-text align-items-center justify-content-center flex-wrap list-unstyled gap-4">
+              <li  className="d-flex flex-column align-items-center flex-wrap">
+                <img src="./Images/html.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">HTML</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/css.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">CSS</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/js.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">JavaScript</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/react.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">React</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/node.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Node.js</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/mongodb.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">MongoDB</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/express.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Express</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/python.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Python</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/github.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Git</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/bootstrap.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Bootstrap</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/jira.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Jira</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/devops.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">DevOps</p>
+              </li>
+              <li  className="d-flex flex-column align-items-center">
+                <img src="./Images/django.png" alt="" style={{ width: '45px' }} />
+                <p className="fs-6">Django</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-      <section className="phone-content-container">
-        {pageContent.map((content) => (
-          <div className="phone-content">
-          {content ? (
-            <>
-              <div className="content-header">
-                <h2 className="content-title">{content.title}</h2>
-                <img
-                  src={content.image}
-                  alt={content.title}
-                  className="box-image"
-                />
-              </div>
-              {Array.isArray(content.content) ? (
-                <ul className="content-skills">
-                  {content.content.map((skill, i) => (
-                    <li key={i} className="skill">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="content-para">{content.content}</p>
-              )}
-            </>
-          ) : (
-            <p className="content-title">Click a card to see more.</p>
-          )}
-        </div>
-        ))}
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
 
