@@ -101,8 +101,8 @@ const Projects = (props) => {
               </div>
               <div className="card-body">
                 <p>{project.description}</p>
-                <a href={project.gitLink} className="btn me-3" style={{ backgroundColor: project.backgroundColor, color: project.textColor }}>Github Link</a>
-                <a href={project.liveLink} className="btn border-dark" style={{ color: project.backgroundColor, backgroundColor: project.textColor }}>Deployed Link</a>
+                <a href={project.gitLink} className="btn me-3" style={{ backgroundColor: project.backgroundColor, color: project.textColor }} target="_blank" rel="noopener noreferrer">Github Link</a>
+                <a href={project.liveLink} className="btn border-dark" style={{ color: project.backgroundColor, backgroundColor: project.textColor }} target="_blank" rel="noopener noreferrer">Deployed Link</a>
               </div>
               <div className="card-footer">
                 <ul  className="list-unstyled d-flex flex-wrap justify-content-center gap-3">
