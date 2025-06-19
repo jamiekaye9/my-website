@@ -3,81 +3,98 @@ import { useState } from "react";
 const AboutMe = () => {
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center mt-4">
-      <div className="row  d-flex flex-column justify-content-center align-items-center">
-        <div className="col-10 col-md-12 d-flex flex-column justify-content-center align-items-center gap-4 mb-5">
+      <div className="row justify-content-center">
+        <div className="col-11 col-md-10 col-lg-8 d-flex flex-column justify-content-center align-items-center gap-4 mb-5">
           <h1 className="display-4">About Me</h1>
-          <p className="text-center">After four years working as a Business Analyst, I developed a deep interest in 
-            how software is created, designed, and integrated—particularly the role that data 
-            quality and structure play in building effective systems. This curiosity led me 
-            to make a career change into software engineering, enrolling in General Assembly’s 
-            immersive Software Engineering Bootcamp. During the course, I gained a strong 
-            foundation in programming and applied my learning through four hands-on projects, 
-            using a range of technologies across both front-end and back-end development. 
-            Now that I’ve completed the program, I’m focused on sharpening and expanding my 
-            skills as I actively pursue my first role in the industry. I'm excited to contribute 
-            to real-world products and continue growing as a developer by building on everything 
-            I’ve learned so far.
+          <p className="text-center">
+            From an early age, I’ve been captivated by how technology transforms
+            manual tasks into seamless digital experiences. Whether fixing
+            broken systems or customising interfaces, I’ve always looked beyond
+            the surface to understand how things work. My career as a Business
+            Analyst deepened my curiosity, revealing that my analytical mindset,
+            drive to learn, and creative problem-solving were well-suited to
+            software development. This led me to complete General Assembly’s
+            Software Engineering Bootcamp, where I gained strong foundational
+            skills in programming. Software engineering has now become more than
+            a career path; it’s a passion I actively pursue through continuous
+            learning and hands-on practice. I’m now seeking my first role in the
+            industry and am excited to channel my passion into helping an
+            innovative company build impactful, user-centric software products.
           </p>
         </div>
       </div>
-      <div className="row  d-flex justify-content-center align-items-center">
-        <div className="card col-11 col-md-12 rounded-4 border-2 mb-5">
-          <div className="card-body">
-            <h3 className="card-title text-center mb-4 display-6">Skills</h3>
-            <ul className="d-flex flex-row card-text align-items-center justify-content-center flex-wrap list-unstyled gap-4">
-              <li  className="d-flex flex-column align-items-center flex-wrap">
-                <img src="./Images/html.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">HTML</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/css.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">CSS</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/js.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">JavaScript</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/react.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">React</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/node.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Node.js</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/mongodb.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">MongoDB</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/express.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Express</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/python.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Python</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/github.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Git</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/bootstrap.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Bootstrap</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/jira.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Jira</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/devops.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">DevOps</p>
-              </li>
-              <li  className="d-flex flex-column align-items-center">
-                <img src="./Images/django.png" alt="" style={{ width: '45px' }} />
-                <p className="fs-6">Django</p>
-              </li>
-            </ul>
+
+      <div className="row justify-content-center mb-5">
+        <div className="col-11 col-md-10 col-lg-8">
+          <div className="card rounded-4 border-2 mb-5 h-100">
+            <div className="card-body">
+              <h3 className="card-title text-center mb-4 display-6">Coding Skills</h3>
+              <ul className="d-flex flex-row align-items-center justify-content-center flex-wrap list-unstyled gap-4">
+                {[
+                  { src: "html", label: "HTML" },
+                  { src: "css", label: "CSS" },
+                  { src: "js", label: "JavaScript" },
+                  { src: "react", label: "React" },
+                  { src: "node", label: "Node.js" },
+                  { src: "mongodb", label: "MongoDB" },
+                  { src: "express", label: "Express" },
+                  { src: "python", label: "Python" },
+                  { src: "github", label: "Git" },
+                  { src: "bootstrap", label: "Bootstrap" },
+                  { src: "jira", label: "Jira" },
+                  { src: "devops", label: "DevOps" },
+                  { src: "django", label: "Django" },
+                  { src: "sql", label: "SQL" },
+                ].map((tech) => (
+                  <li key={tech.label} className="d-flex flex-column align-items-center">
+                    <img src={`./Images/${tech.src}.png`} alt={tech.label} style={{ width: "45px" }} />
+                    <p className="fs-6">{tech.label}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row justify-content-center mb-5">
+        <div className="col-11 col-md-10 col-lg-8">
+          <div className="card rounded-4 border-2 mb-5 h-100">
+            <div className="card-body">
+              <h3 className="card-title text-center mb-4 display-6">Soft Skills</h3>
+              <ul className="d-flex flex-row align-items-center justify-content-center flex-wrap list-unstyled gap-4">
+                {[
+                  { icon: "search", label: "Problem Solving" },
+                  { icon: "person-heart", label: "Stakeholder Management" },
+                  { icon: "bar-chart", label: "Data Analysis" },
+                  { icon: "chat-dots", label: "Communication" },
+                  { icon: "lightbulb", label: "Critical Thinking" },
+                  { icon: "people", label: "Teamwork" }
+                ].map((skill) => (
+                  <li key={skill.label} className="d-flex flex-column align-items-center" style={{ width: "100px" }}>
+                    <i className={`bi bi-${skill.icon} fs-1`}></i>
+                    <p className="fs-6 text-center">{skill.label}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row justify-content-center mb-5">
+        <div className="col-11 col-md-10 col-lg-8">
+          <div className="card rounded-4 border-2 mb-5 h-100">
+            <div className="card-body">
+              <h3 className="card-title text-center mb-4 display-6">Hobbies & Interests</h3>
+              <p className="card-text text-center">
+                I’m a lifelong sports enthusiast, with a particular passion for Football, Formula 1, and Tennis.
+                I recently attended my first Formula 1 race in Qatar and was hooked by the whole event.
+                I’m now looking at the calendar for opportunities to visit new circuits and cities.
+                Outside of sports, I enjoy cooking, going to the theatre, comedy nights, and discovering new places through travel.
+                I grew up eating my grandmother’s Middle Eastern dishes and now enjoy recreating those recipes for family and friends.
+              </p>
+            </div>
           </div>
         </div>
       </div>

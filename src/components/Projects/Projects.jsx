@@ -13,9 +13,9 @@ const Projects = (props) => {
       gitLink: "https://github.com/jamiekaye9/football-bingo",
       liveLink: "https://jamiekaye9.github.io/football-bingo/",
       skills: [
-        "./Images/html.png",
-        "./Images/css.png",
-        "./Images/js.png"
+        {link: "./Images/html.png", label: "HTML"},
+        {link: "./Images/css.png", label: "CSS"},
+        {link: "./Images/js.png", label: "JavaScript"},
       ],
       backgroundColor: "#2E0248",
       textColor: 'white'
@@ -29,11 +29,11 @@ const Projects = (props) => {
       gitLink: "https://github.com/jamiekaye9/team-link",
       liveLink: "https://team-link-git-main-jamie-kayes-projects.vercel.app/",
       skills: [
-        "./Images/html.png",
-        "./Images/css.png",
-        "./Images/js.png",
-        "./Images/node.png",
-        "./Images/mongodb.png",
+        {link: "./Images/js.png", label: "JavaScript"},
+        {link: "./Images/node.png", label: "Node.js"},
+        {link: "./Images/mongodb.png", label: "MongoDB"},
+        {link: "./Images/css.png", label: "CSS"},
+        {link: "./Images/html.png", label: "HTML"},
       ],
       backgroundColor: "#9161B8",
       textColor: 'white'
@@ -46,10 +46,10 @@ const Projects = (props) => {
       gitLink: "https://github.com/jamiekaye9/fix-hub-front-end",
       liveLink: "https://fix-hub.netlify.app/",
       skills: [
-        "./Images/react.png",
-        "./Images/express.png",
-        "./Images/mongodb.png",
-        "./Images/css.png"
+        {link: "./Images/react.png", label: "React"},
+        {link: "./Images/express.png", label: "Express"},
+        {link: "./Images/mongodb.png", label: "MongoDB"},
+        {link: "./Images/css.png", label: "CSS"},
       ],
       backgroundColor: "#282828",
       textColor: '#4ADFE3'
@@ -62,11 +62,10 @@ const Projects = (props) => {
       gitLink: "https://github.com/jamiekaye9/job-logger",
       liveLink: "https://job-logger.onrender.com",
       skills: [
-        "./Images/python.png",
-        "./Images/django.png",
-        "./Images/postgresql.png",
-        "./Images/css.png",
-        "./Images/github.png"
+        {link:"./Images/python.png", label:"Python"},
+        {link:"./Images/django.png", label:"Django"},
+        {link:"./Images/sql.png", label:"SQL"},
+        {link:"./Images/css.png", label:"CSS"},
       ],
       backgroundColor: "#0093BF",
       textColor: 'white',
@@ -81,10 +80,10 @@ const Projects = (props) => {
       logo: "",
       gitLink: "https://github.com/jamiekaye9/job-logger2.0",
       skills: [
-        "./Images/react.png",
-        "./Images/django.png",
-        "./Images/postgresql.png",
-        "./Images/bootstrap.png",
+        {link: "./Images/react.png", label: "React"},
+        {link: "./Images/django.png", label: "Django"},
+        {link: "./Images/sql.png", label: "SQL"},
+        {link: "./Images/bootstrap.png", label: "Bootstrap"},
       ],
       backgroundColor: "#0093BF",
       textColor: 'white',
@@ -108,8 +107,9 @@ const Projects = (props) => {
               <div className="card-footer">
                 <ul  className="list-unstyled d-flex flex-wrap justify-content-center gap-3">
                   {project.skills.map((skill, index) => (
-                    <li key={index} className="d-inline-block">
-                      <img src={skill} alt="" style={{ width: '40px' }} />
+                    <li key={index} className="d-inline-block d-flex flex-column align-items-center">
+                      <img src={skill.link} alt="" style={{ width: '40px' }} />
+                      <span className="ms-2 text-center">{skill.label}</span>
                     </li>
                   ))}
                 </ul>
